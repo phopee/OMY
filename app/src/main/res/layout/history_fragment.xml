@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+   >
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="view"
+            type="com.example.omy.views.HistoryFragment" />
+        <variable
+            name="viewModel"
+            type="com.example.omy.models.HistoricalRatesViewModel" />
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/mint_cream">
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/chartRON"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="60dp"
+
+            />
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/chartBGN"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:layout_below="@+id/chartRON"/>
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/chartUSD"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:layout_below="@id/chartUSD" />
+
+    </RelativeLayout>
+
+</layout>

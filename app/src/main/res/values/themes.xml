@@ -1,0 +1,39 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.OMY" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/pumpkin</item>
+        <item name="colorPrimaryVariant">@color/mint_cream</item>
+        <item name= "hintTextColor">@color/colorDarkGray</item>
+        <item name ="colorAccent">#FF9800</item>
+        <item name="android:textColorSecondary">@color/colorDarkGray</item>
+        <item name= "android:textColorPrimary">@color/white</item>
+        <item name="android:textColorTertiary">@android:color/black</item>
+        <item name="android:textColorTertiaryInverse">@android:color/black</item>
+        <item name="backgroundColor">@color/cream</item>
+        <item name="colorPrimaryDark">#D65108</item>
+        <item name="colorError">@color/redRow</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryDark</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.OMY.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="CustomRadioTheme" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:colorControlNormal">#7a7a7a</item>
+        <item name="android:colorControlActivated">#FF9800</item>
+        <item name="android:colorControlHighlight">#FF9800</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Theme.OMY.AppBarOverlay" >
+    <item name="backgroundColor">@color/black</item>
+        <item name="textAllCaps">true</item>
+
+
+    </style>
+
+    <style name="Theme.OMY.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>

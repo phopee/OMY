@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="view"
+            type="com.example.omy.views.SettingsFragment" />
+        <variable
+            name="viewModel"
+            type="com.example.omy.models.SharedViewModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/mint_cream">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_refresh_rate"
+            android:text="@string/change_refresh_rate"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="20dp">
+
+        </TextView>
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="20dp"
+            android:orientation="horizontal"
+            android:id="@+id/radioGroup"
+            app:layout_constraintTop_toBottomOf="@+id/tv_refresh_rate">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_5"
+                android:theme="@style/CustomRadioTheme"
+                android:text="@string/_5_seconds">
+            </RadioButton>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_60"
+                android:theme="@style/CustomRadioTheme"
+                android:text="@string/_60_seconds">
+            </RadioButton>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_1h"
+                android:theme="@style/CustomRadioTheme"
+                android:text="@string/one_hour">
+            </RadioButton>
+
+        </RadioGroup>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_currency"
+            android:text="@string/choose_preferred_currency_base"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup">
+        </TextView>
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_currency"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="20dp">
+
+        </Spinner>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

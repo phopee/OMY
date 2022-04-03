@@ -1,0 +1,48 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardViewRates"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginTop="8dp"
+    android:elevation="10sp"
+    app:cardCornerRadius="4dp"
+    android:background="@color/cream">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="10dp"
+        android:background="@color/ivory"
+        android:paddingVertical="5dp">
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/iv_excange"
+            android:src="@drawable/outline_change_circle_24">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/currency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textStyle="bold"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/iv_excange"
+            tools:text="123-245-564-347" />
+
+        <TextView
+            android:id="@+id/value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:maxWidth="220dp"
+            android:maxLines="3"
+            android:layout_toEndOf="@id/currency"
+            android:layout_marginStart="5dp" />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
+
