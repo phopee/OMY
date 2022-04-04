@@ -8,7 +8,7 @@
             type="com.example.omy.views.SettingsFragment" />
         <variable
             name="viewModel"
-            type="com.example.omy.models.SharedViewModel" />
+            type="com.example.omy.models.SettingsViewModel" />
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -68,6 +68,7 @@
         <Spinner
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/sp_curr"
             app:layout_constraintTop_toBottomOf="@id/tv_currency"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_margin="20dp">

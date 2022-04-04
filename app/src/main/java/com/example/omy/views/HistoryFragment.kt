@@ -51,38 +51,15 @@ class HistoryFragment : Fragment() {
             }
         })
     }
-    fun getXAxisValues(): ArrayList<String> {
-        return viewModel.ratesList.value?.keys?.toList() as ArrayList<String>
-    }
+
 
     fun setLineChartData() {
-        val final = ArrayList<Double>()
-        val initialList = viewModel.ratesList.value?.values
-        // val goodSet = initialList?.filter { it.rates.containsKey("RON") }
-        // val list = mutableListOf<ExchangeRate>()
-//        if (initialList != null) {
-//            for( i in 0..initialList.size-1){
-//                list.add(initialList.elementAt(i))
-//            }
-        if (initialList != null) {
-            for (i in 0..initialList.size - 1){
-             val x=   initialList.elementAt(i).rates.filter { it.key.equals("RON")}
-              final.add(x.get("RON")!!)
-        }
-        }
 
-
-            val valueSet1 = ArrayList<Entry>()
-            for(i in 0..final.size-1) {
-                valueSet1.add(Entry(i.toFloat(),final[i].toFloat()))
-            }
-            val lineDataSet = LineDataSet(valueSet1, "RON")
-            lineDataSet.color = Color.rgb(0, 155, 0)
-
+        val lineDataSet = viewModel.getChartDataForCurrency("RON")
+        lineDataSet.color = Color.rgb(0, 155, 0)
         val data = LineData(lineDataSet)
         lineDataSet.color = resources.getColor(R.color.black)
         lineDataSet.lineWidth = 2f
-
         lineDataSet.circleRadius = 5f
         lineDataSet.circleColors = listOf(resources.getColor(R.color.black))
         lineDataSet.setDrawFilled(true)

@@ -14,4 +14,5 @@
     <string name="_5_seconds">5 seconds</string>
     <string name="rates_updated_at">Rates updated at:</string>
     <string name="values_in">Values expressed in</string>
+    <string name="usd_expressed_in_ron_for_the_last_10_days">USD expressed in RON for the last 10 days</string>
 </resources>

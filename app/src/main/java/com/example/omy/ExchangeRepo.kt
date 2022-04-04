@@ -106,5 +106,13 @@ object ExchangeRepo {
     fun setRefreshRate(value: Long){
         this.refreshIntervalMs = value
     }
+    suspend fun getSymbols():MutableList<String>? {
+        val resp = Service.api.getSymbols()
+        if (resp.isSuccessful && !resp.body()?.symbols.isNullOrEmpty()) {
+            return resp.body()!!.symbols.keys.filterNotNull().toMutableList()
+        }
+        return null
+    }
+
 
 }
